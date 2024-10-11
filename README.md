@@ -15,13 +15,13 @@ A multi-platform Nix configuration template optimized as development environment
     git clone https://github.com/srid/rust-nix-template
     cd rust-nix-template
     nix develop
-    nix run github:juspay/nixos-unified-template#neovim
+    nix run github:rvegmond/nixos-unified-template#neovim
     # Type `SPC f f` to open a .rs file
     # Wait for rust-analyzer to finish; go to a symbol and type K
     ```
-    
+
     Expect to see:
-    
+
     <img width="534" alt="image" src="https://github.com/user-attachments/assets/204e6ad7-c233-4503-9924-73fbce2772d6">
 
 
@@ -45,8 +45,8 @@ If you use, or intend to use, [NixOS]:
     sudo su -
     cd /etc/nixos
     nix --accept-flake-config --extra-experimental-features "nix-command flakes" \
-      run github:juspay/omnix -- \
-      init github:juspay/nixos-unified-template#nixos -o .
+      run github:rvegmond/omnix -- \
+      init github:rvegmond/nixos-unified-template#nixos -o .
     # Replace HOSTNAME with the hostname you entered above.
     mv configuration.nix hardware-configuration.nix ./configurations/nixos/HOSTNAME/
     nix --extra-experimental-features "nix-command flakes" run
@@ -65,8 +65,8 @@ If you are on macOS or running other Linux distros:
 1. Open a new terminal; Initialize[^omnix] your Nix configuration using this repo as template:
     ```sh-session
     mkdir ~/nixconfig && cd ~/nixconfig
-    nix --accept-flake-config run github:juspay/omnix -- \
-      init github:juspay/nixos-unified-template -o .
+    nix --accept-flake-config run github:rvegmond/omnix -- \
+      init github:rvegmond/nixos-unified-template -o .
     ```
     <img width="1092" alt="image" src="https://github.com/user-attachments/assets/1341d200-d894-488c-ba74-42d8830cc6f7">
 
